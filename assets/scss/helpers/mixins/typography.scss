@@ -1,0 +1,107 @@
+@mixin richtext {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin text-inverted {
+  color: $white;
+}
+
+@mixin text-muted {
+  color: $grey;
+}
+
+@mixin body-text {
+  font-size: pxToRem(20px);
+  line-height: 1.6;
+}
+
+@mixin heading-1 {
+  font-weight: $font-weight-bold;
+  font-size: pxToRem(120px);
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+@mixin heading-2 {
+  font-weight: $font-weight-bold;
+  font-size: pxToRem(96px);
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+@mixin heading-3 {
+  font-weight: $font-weight-bold;
+  font-size: pxToRem(72px);
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+@mixin heading-4 {
+  font-weight: $font-weight-semibold;
+  font-size: pxToRem(40px);
+  line-height: 1.25;
+}
+
+@mixin heading-5 {
+  font-weight: $font-weight-bold;
+  font-size: pxToRem(32px);
+  line-height: 1.25;
+}
+
+@mixin heading-6 {
+  font-weight: $font-weight-bold;
+  font-size: pxToRem(20px);
+  line-height: 1.6;
+}
+
+@mixin font-small {
+  @include heading-6;
+  font-weight: unset;
+}
+
+@mixin buttonText {
+  font-weight: $font-weight-semibold;
+  font-size: pxToRem(16px);
+  line-height: 1.5;
+}
+
+@mixin underline {
+  position: relative;
+  white-space: nowrap;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: currentColor;
+  }
+}
+
+@mixin multiline-strikethrough($thickness) {
+  $baseline: 51.5%;
+  background-image: linear-gradient(transparent 0%, transparent calc(#{ $baseline} - #{$thickness / 2}), currentColor calc(#{$baseline} - #{$thickness / 2}), currentColor calc(#{$baseline} + #{$thickness / 2}), transparent calc(#{$baseline} + #{$thickness / 2}), transparent 100%);
+}
+
+
+@mixin anchor-offset() {
+  &[id]::before {
+    display: block;
+    content: " ";
+    @include size-of-header(margin-top, -1, $anchor-scroll-offset);
+    @include size-of-header(height, 1, $anchor-scroll-offset);
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+

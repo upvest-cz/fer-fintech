@@ -1,0 +1,36 @@
+@function map-get-or-key($map, $key) {
+  @if map-has-key($map, $key) or map-has-key($map, -$key) {
+    @if $key != 'auto' and type-of($key) == 'number' and $key < 0 {
+      @return 0 - map-get($map, -$key);
+    } @else {
+      @return map-get($map, $key);
+    }
+  } @else if type-of($key) == 'string' {
+    @return unquote($key);
+  } @else {
+    @return $key;
+  }
+}
+
+
+@function spacer($key) {
+  @return map-get-or-key($spacers, $key);
+}
+
+
+@function spacer-rem($key) {
+  @return map-get-or-key($spacers-rem, $key);
+}
+
+@function columns($number, $base: 12) {
+  @return (100%/12) * $number;
+}
+
+@function aspectRatio($ratio: 16/9) {
+  @return (100% * (1 / $ratio));
+}
+
+@function pxToRem($size) {
+  $remSize: $size / $base-font-size;
+  @return #{$remSize}rem;
+}

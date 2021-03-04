@@ -1,0 +1,45 @@
+@mixin print-breakpoint-values($map) {
+  @each $breakpoint, $value in $map {
+    @if $breakpoint == xs {
+      @content($value);
+    } @else {
+      @include media-breakpoint-up($breakpoint) {
+        @content($value);
+      }
+    }
+  }
+}
+
+@mixin size-of-header($property, $multiplier: 1, $add: 0) {
+  @include print-breakpoint-values($header-size) using ($value) {
+    #{$property}: $value * $multiplier + $add;
+  }
+}
+
+@mixin sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; // Fix for https://github.com/twbs/bootstrap/issues/25686
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin grid-aspect-hack {
+  display: grid;
+  position: relative;
+
+  & > *,
+  &::before,
+  &::after {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  > svg {
+    width: auto;
+    height: auto;
+  }
+}

@@ -1,0 +1,90 @@
+/*
+Bootstrap overrides
+ */
+$grid-gutter-width: 28px;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 880px,
+);
+
+$container-paddings: (
+  xs: $grid-gutter-width,
+  lg: 40px,
+);
+
+$spacer: 8px;
+$spacers: (
+  0: 0,
+  1: ($spacer * 1),
+  2: ($spacer * 2),
+  3: ($spacer * 3),
+  4: ($spacer * 4),
+  5: ($spacer * 5),
+  6: ($spacer * 6),
+  7: ($spacer * 7),
+  8: ($spacer * 8),
+  9: ($spacer * 9),
+  10: ($spacer * 10),
+);
+
+$spacer-rem: 1rem;
+$spacers-rem: (
+  0: 0,
+  1: ($spacer-rem * 1),
+  2: ($spacer-rem * 2),
+  3: ($spacer-rem * 3),
+  4: ($spacer-rem * 4),
+  5: ($spacer-rem * 5),
+  6: ($spacer-rem * 6),
+  7: ($spacer-rem * 7),
+  8: ($spacer-rem * 8),
+  9: ($spacer-rem * 9),
+  10: ($spacer-rem * 10),
+);
+
+/*
+Font sizing
+ */
+$base-font-size: 16px;
+$base-line-height: 1.42857;
+
+$font-family-base: 'Montserrat', sans-serif;
+$font-family-headings: $font-family-base;
+
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$font-weight-base: $font-weight-normal;
+
+/*
+Positioning and layering
+ */
+$header-zIndex: 9999;
+$anchor-scroll-offset: 20px;
+
+/*
+Colors
+ */
+$white: #fff;
+$grey: #C9D8D8;
+$black: #000;
+$primary: #00E0FF;
+$secondary: #00FFA3;
+
+/*
+Shadows
+ */
+
+$card-shadow: 0px 6px 19px -1px rgba(17, 17, 17, 0.09), 0px 6px 19px -1px rgba(0, 123, 255, 0.04);
+
+
+/*
+Dimensions
+ */
+$header-size: (
+  xs: 39px,
+  lg: 52px,
+);

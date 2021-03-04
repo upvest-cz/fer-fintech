@@ -1,0 +1,38 @@
+@mixin table-heading {
+  border-bottom: 1px solid $grey;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 30px 20px;
+}
+
+@mixin table-main {
+  padding: 30px 20px;
+}
+
+
+@mixin table {
+  border: 1px solid $primary;
+  border-collapse: collapse;
+
+  thead {
+    th,
+    td {
+      @include table-heading;
+    }
+  }
+
+  tbody {
+    @include table-main;
+  }
+}
+
+@mixin table-modern {
+  border: 1px solid $primary;
+
+  header {
+    @include table-heading;
+  }
+
+  main {
+    @include table-main;
+  }
+}
