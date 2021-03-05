@@ -32,9 +32,8 @@ export default {
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
-      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#262933' },
-      { name: 'msapplication-TileColor', content: '#262933' },
-      { name: 'theme-color', content: '#262933' },
+      { name: 'msapplication-TileColor', content: '#000000' },
+      { name: 'theme-color', content: '#000000' },
       // --- End Favicons ---
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,600&display=swap' },
     ]
