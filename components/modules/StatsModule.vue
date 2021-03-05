@@ -1,7 +1,7 @@
 <template>
   <section class="module StatsModule">
     <div class="container">
-      <h2 class="StatsModule__title h3">Co nás štve</h2>
+      <Tagline>Co nás štve</Tagline>
       <div class="StatsModule__grid">
         <template v-for="i in 1">
           <div ref="statNumber" class="StatsModule__grid__number" style="color: #00E0FF"><span class="h1">55</span> %</div>

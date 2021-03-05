@@ -1,0 +1,94 @@
+<template>
+  <section class="module WhatWeDoModule">
+    <div class="container">
+      <Tagline>Co děláme?</Tagline>
+      <div class="WhatWeDoModule__list">
+        <template v-for="i in 1">
+          <div ref="listItem" class="WhatWeDoModule__listItem">
+            <h2 class="WhatWeDoModule__listItem__title">Férový audit pro firmy</h2>
+            <div class="richtext">
+              <p><b>Zakládáte nový fintech? Spouštíte nový finanční produkt? Anebo už fungujete nějakou dobu, ale stáli byste o to, aby se na férovost vašeho podnikání podívaly nezaujaté oči?</b> Nechte si udělat férový audit. Rádi vás zdarma nasměrujeme a propojíme s nezávislými opinion leadery, odborníky či neziskovými organizacemi. Sami jsme mnoha podobnými diskusemi a konzultacemi prošli, rádi budeme sdílet zkušenosti a doporučení, na koho se ve které oblasti obrátit.</p>
+            </div>
+            <Button href="mailto:info@ferfintech.cz">Chci férový audit</Button>
+          </div>
+          <div ref="listItem" class="WhatWeDoModule__listItem">
+            <h2 class="WhatWeDoModule__listItem__title">Poradenství pro lidi</h2>
+            <div class="richtext">
+              <p><b>Podepsali jste nevýhodnou smlouvu? Zatajil vám finanční poradce informace nebo špatně vysvětlil produkt? Zjistili jste že vaše pojištění, investice nebo jiný produkt jsou k ničemu?</b> Ozvěte se nám. Pokusí se vám poradit přímo naši kolegové anebo vás nasměrujeme na prověřené organizace, které vám pomohou s řešením problémů.</p>
+            </div>
+            <Button href="mailto:info@ferfintech.cz">Potřebuji poradit</Button>
+          </div>
+        </template>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+import Tagline from '~/components/Tagline.vue';
+import { ModuleMixin } from '~/mixins/moduleMixin.js';
+import gsap from 'gsap';
+
+export default {
+  name: 'WhatWeDoModule',
+  mixins: [ModuleMixin],
+  components: {
+    Tagline
+  },
+  methods: {
+    getReveals() {
+      return [
+        {
+          targets: this.$refs.listItem,
+          onInViewport: (el) => {
+            const a = gsap.from(el.children, {
+              y: 30,
+              opacity: 0,
+              stagger: 0.15
+            })
+
+            console.log(a);
+          }
+        }
+      ];
+    }
+  }
+};
+</script>
+
+<style scoped lang="scss">
+.WhatWeDoModule {
+  $root: &;
+
+  padding: 160px 0;
+
+  .Tagline{
+    margin-bottom: spacer(5);
+  }
+
+  #{$root}__list {
+
+    #{$root}__listItem {
+      @include has-reveal;
+
+      &:not(:last-child) {
+        margin-bottom: spacer(10);
+      }
+
+      &__title {
+        @include heading-4;
+        text-transform: none;
+        margin-bottom: spacer(2);
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      .Button {
+        margin-top: spacer(4);
+      }
+    }
+  }
+}
+</style>
