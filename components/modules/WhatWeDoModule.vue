@@ -7,14 +7,14 @@
           <div ref="listItem" class="WhatWeDoModule__listItem">
             <h2 class="WhatWeDoModule__listItem__title">Férový audit pro firmy</h2>
             <div class="richtext">
-              <p><b>Zakládáte nový fintech? Spouštíte nový finanční produkt? Anebo už fungujete nějakou dobu, ale stáli byste o to, aby se na férovost vašeho podnikání podívaly nezaujaté oči?</b> Nechte si udělat férový audit. Rádi vás zdarma nasměrujeme a propojíme s nezávislými opinion leadery, odborníky či neziskovými organizacemi. Sami jsme mnoha podobnými diskusemi a konzultacemi prošli, rádi budeme sdílet zkušenosti a doporučení, na koho se ve které oblasti obrátit.</p>
+              <p><b>Zakládáte fintechový projekt? Spouštíte nový finanční produkt? Nebo už fungujete nějakou dobu, ale stojíte o to, aby se na férovost vašeho podnikání podívaly nezaujaté oči?</b> Zdarma vás nasměrujeme a propojíme s nezávislými opinion leadery, odborníky či neziskovými organizacemi. Sami jsme mnoha podobnými diskuzemi a konzultacemi prošli a rádi se s vámi podělíme o zkušenosti nebo doporučíme, na koho se ve které oblasti obrátit.</p>
             </div>
             <Button href="mailto:info@ferfintech.cz">Chci férový audit</Button>
           </div>
           <div ref="listItem" class="WhatWeDoModule__listItem">
             <h2 class="WhatWeDoModule__listItem__title">Poradenství pro lidi</h2>
             <div class="richtext">
-              <p><b>Podepsali jste nevýhodnou smlouvu? Zatajil vám finanční poradce informace nebo špatně vysvětlil produkt? Zjistili jste že vaše pojištění, investice nebo jiný produkt jsou k ničemu?</b> Ozvěte se nám. Pokusí se vám poradit přímo naši kolegové anebo vás nasměrujeme na prověřené organizace, které vám pomohou s řešením problémů.</p>
+              <p><b>Podepsali jste nevýhodnou smlouvu? Zatajil vám finanční poradce potřebné informace nebo špatně vysvětlil produkt? Zjistili jste, že vaše pojištění nebo třeba investice je vlastně k ničemu?</b> Ozvěte se nám. Propojíme Vás s prověřenými nezávislými odborníky a neziskovými organizacemi, které vám s řešením problémů pomůžou.</p>
             </div>
             <Button href="mailto:info@ferfintech.cz">Potřebuji poradit</Button>
           </div>
