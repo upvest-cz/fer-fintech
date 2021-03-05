@@ -2,7 +2,7 @@
   <component
     :is="getTagName"
     v-bind="$props"
-    class="Button"
+    :class="['Button', `Button--${type || 'plain'}`]"
     @click="handleClick"
   >
     <span>
@@ -85,38 +85,52 @@ export default {
   align-items: center;
   padding: 16px 24px;
   border-radius: 99px;
-  background: $primary;
-  color: $black;
+  background: transparent;
+  background-size: 200% auto;
+  color: $primary;
   text-transform: uppercase;
+  transition: background-color 0.2s ease,background-position 0.4s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 
   #{$root}__icon {
     @include text-inverted;
     position: relative;
     z-index: 0;
     margin-left: 26px;
-
-    &::before {
-      $size: 40px;
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      background: $black;
-      border-radius: 99px;
-    }
   }
 
-  &.Button--plain {
-    background: transparent;
-    color: $primary;
+  &.Button--primary {
+    background-position: right center;
+    background-image: linear-gradient(to right, $secondary 0%, $primary 30%, $primary 100%);
+    color: $black;
+
+    &:hover {
+      background-color: lighten($primary, 10%);
+      background-position: left center;
+      #{$root}__icon {
+        transform: rotate(-90deg);
+
+        &::before {
+          background: lighten($black, 7%);
+        }
+      }
+    }
 
     #{$root}__icon {
+      transition: inherit;
+
       &::before {
-        display: none;
+        $size: 40px;
+        transition: inherit;
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        background: $black;
+        border-radius: 99px;
       }
     }
   }

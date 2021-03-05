@@ -63,7 +63,7 @@
           </div>
           <FairBadge class="original" />
         </div>
-        <Button href="mailto:info@ferfintech.cz">Napište nám a zapojte se!</Button>
+        <Button type="primary" href="mailto:info@ferfintech.cz">Napište nám a zapojte se!</Button>
       </div>
 
     </div>

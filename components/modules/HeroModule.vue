@@ -60,12 +60,11 @@ export default {
     @include has-reveal;
     @include richtext;
     @include text-muted;
-
-    margin-bottom: spacer(4);
   }
 
   .Button {
     @include has-reveal;
+    margin-top: spacer(4);
   }
 }
 </style>
