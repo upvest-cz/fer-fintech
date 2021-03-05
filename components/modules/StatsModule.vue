@@ -1,12 +1,12 @@
 <template>
   <section class="module StatsModule">
     <div class="container">
-      <Tagline>Co byste měli vědět</Tagline>
+      <h2 class="StatsModule__title h3">Co nás štve</h2>
       <div class="StatsModule__grid">
         <template v-for="i in 1">
           <div ref="statNumber" class="StatsModule__grid__number" style="color: #00E0FF"><span class="h1">55</span> %</div>
           <div ref="statText" class="StatsModule__grid__text">
-            lidí již někdy doplatilo na nevýhodný finanční produkt, jako je půjčka, investice nebo pojištění
+            lidí v Česku již někdy doplatilo na nevýhodný finanční produkt, jako je půjčka, investice nebo pojištění
             <hr style="border-color: #00E0FF" />
           </div>
           <!-- -->
@@ -18,7 +18,7 @@
           <!-- -->
           <div ref="statNumber" class="StatsModule__grid__number" style="color: #01FFA4"><span class="h1">22</span> %</div>
           <div ref="statText" class="StatsModule__grid__text">
-            22 % lidí si myslí, že finanční produkty by měly být srozumitelné samy od sebe
+            Čechů si myslí, že finanční produkty by měly být srozumitelné samy o sobě
             <hr style="border-color: #01FFA4" />
           </div>
         </template>
@@ -86,7 +86,8 @@ export default {
 
   padding: 160px 0;
 
-  .Tagline {
+  .Tagline,
+  #{$root}__title {
     margin-bottom: spacer(3);
   }
 

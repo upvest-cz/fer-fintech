@@ -3,25 +3,13 @@
     <div class="container">
       <h2 class="FoundersModule__title h3">Zakládající subjekty</h2>
       <div class="FoundersModule__text">
-        <p>Zakládajícími subjekty jsou online životní pojištění Mutumutu, investiční crowdfunding Upvest a platforma na obchodování s cennými papíry Fondee.</p>
+        <p>Zakládajícími subjekty jsou online životní pojištění Mutumutu, investiční crowdfundingová platforma Upvest a investiční platforma Fondee.</p>
       </div>
       <ul class="FoundersModule__founders">
         <template v-for="i in 1">
           <li ref="foundersItem">
             <blockquote>
-              Lidé často nerozumějí podmínkám a smlouvám finančních institucí, a tím pádem je často už ani pořádně nečtou.
-            </blockquote>
-            <Author>
-              <template v-slot:image>
-                <img src="~/assets/images/founders/hlavsa.png" alt="Jan Hlavsa, Co-Founder Fondee">
-              </template>
-              <template v-slot:name>Jan Hlavsa</template>
-              <template v-slot:position>Co-Founder Fondee</template>
-            </Author>
-          </li>
-          <li ref="foundersItem">
-            <blockquote>
-              Lidé často nerozumějí podmínkám a smlouvám finančních institucí, a tím pádem je často už ani pořádně nečtou.
+              Zbavme se zavádějících sousloví typu „pohádkové zhodnocení“, „chytrá investice“ nebo „nadstandardní výnos“. Přestaňme tímto toxickým marketingem vzbuzovat falešná očekávání, která pak nemůžeme naplnit. Z transparentnějšího a kulturnějšího prostředí budeme profitovat všichni.
             </blockquote>
             <Author>
               <template v-slot:image>
@@ -33,7 +21,7 @@
           </li>
           <li ref="foundersItem">
             <blockquote class="small">
-              Náš cíl je, aby lidé opět mohli finančním produktům a službám věřit. Při tvorbě Mutumutu jsme museli zapomenout na vše, co dosud trh považoval za normu, a od nuly jsme vybudovali novou fér službu.
+              Náš cíl je, aby lidé opět mohli finančním produktům a službám věřit. Při tvorbě Mutumutu jsme museli zapomenout na vše, co dosud trh považoval za normu, a od nuly jsme vybudovali novou fér službu. Teď chceme svoje know-how předávat dál, abychom firmám pomohli tvořit etické, srozumitelné produkty a zákazníkům dali lepší kontrolu nad tím, co se děje s jejich financemi.
             </blockquote>
             <Author>
               <template v-slot:image>
@@ -41,6 +29,18 @@
               </template>
               <template v-slot:name>Jindřich Lenz</template>
               <template v-slot:position>CEO Mutumutu</template>
+            </Author>
+          </li>
+          <li ref="foundersItem">
+            <blockquote>
+              Fondee je startup, který ukazuje, že investice se dají dělat i jinak – jednoduše, levně, transparentně a bezstarostně. Jeho ambicí je naučit lidi, aby si pravidelně spořili.
+            </blockquote>
+            <Author>
+              <template v-slot:image>
+                <img src="~/assets/images/founders/hlavsa.png" alt="Jan Hlavsa, Co-Founder Fondee">
+              </template>
+              <template v-slot:name>Jan Hlavsa</template>
+              <template v-slot:position>CEO Fondee</template>
             </Author>
           </li>
         </template>

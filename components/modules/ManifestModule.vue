@@ -6,52 +6,52 @@
         <template v-for="i in 1">
           <div ref="manifestNumber" class="ManifestModule__grid__number" style="color: #00FFA3">1.</div>
           <div ref="manifestText" class="ManifestModule__grid__text">
-            Děláme byznys eticky a vyzýváme k tomu i ostatní
+            Děláme byznys eticky a vyzýváme k tomu i ostatní.
           </div>
           <!-- -->
           <div ref="manifestNumber" class="ManifestModule__grid__number" style="color: #00ffab">2.</div>
           <div ref="manifestText" class="ManifestModule__grid__text">
-            Kultivujeme prostředí, ve kterém podnikáme
+            Kultivujeme prostředí, ve kterém podnikáme.
           </div>
           <!-- -->
           <div ref="manifestNumber" class="ManifestModule__grid__number" style="color: #00fcb7">3.</div>
           <div ref="manifestText" class="ManifestModule__grid__text">
-            Sdílíme best practice, inspirujeme a necháváme se inspirovat. Hledáme pro sebe i ostatní informace a inspiraci od dalších firem
+            Sdílíme “best practice”, inspirujeme a necháváme se inspirovat. Sbíráme pro sebe i ostatní informace a zkušenosti od dalších firem.
           </div>
           <!-- -->
           <div ref="manifestNumber" class="ManifestModule__grid__number" style="color: #00f8c4">4.</div>
           <div ref="manifestText" class="ManifestModule__grid__text">
-            Pomáháme zákazníkům a vedeme je k tomu, aby byli emancipovaní
+            Pomáháme zákazníkům a vedeme je k tomu, aby byli emancipovaní.
           </div>
           <!-- -->
           <div ref="manifestNumber" class="ManifestModule__grid__number" style="color: #00f5cf">5.</div>
           <div ref="manifestText" class="ManifestModule__grid__text">
-            Zaměřujeme se na pomoc lidem s konkrétními problémy
+            Zaměřujeme se na pomoc lidem s konkrétními problémy.
           </div>
           <!-- -->
           <div ref="manifestNumber" class="ManifestModule__grid__number" style="color: #00f1dd">6.</div>
           <div ref="manifestText" class="ManifestModule__grid__text">
-            Odmítáme manipulativní a pro trh toxické vnucování služeb a produktů
+            Odmítáme manipulativní a pro trh toxické vnucování služeb a produktů.
           </div>
           <!-- -->
           <div ref="manifestNumber" class="ManifestModule__grid__number" style="color: #00ece9">7.</div>
           <div ref="manifestText" class="ManifestModule__grid__text">
-            Trváme na tom, že srozumitelný a nemanipulativní web či aplikace by měly být primárními komunikačními kanály mezi společností a zákazníkem
+            Trváme na tom, že srozumitelný a nemanipulativní web či aplikace by měly být primárními komunikačními kanály mezi společností a zákazníkem.
           </div>
           <!-- -->
           <div ref="manifestNumber" class="ManifestModule__grid__number" style="color: #00e9f5">8.</div>
           <div ref="manifestText" class="ManifestModule__grid__text">
-            Věříme, že produkty a služby mají být transparentní a co nejjednodušší, a to včetně jazyka smluv
+            Zasazujeme se o to, aby finanční produkty a služby byly maximálně transparentní a co nejjednodušší, a to včetně jazyka smluv.
           </div>
           <!-- -->
           <div ref="manifestNumber" class="ManifestModule__grid__number" style="color: #00e6ff">9.</div>
           <div ref="manifestText" class="ManifestModule__grid__text">
-            Designujeme jednoduché a srozumitelné produkty, jež nepotřebují dodatečné vysvětlení či instrukce
+            Vytváříme jednoduché, srozumitelné produkty, které nepotřebují dodatečné vysvětlení či instrukce.
           </div>
           <!-- -->
           <div ref="manifestNumber" class="ManifestModule__grid__number" style="color: #00E0FF">10.</div>
           <div ref="manifestText" class="ManifestModule__grid__text">
-            Zavazujeme se, že veškeré užitečné informace budou vždy volně přístupné veřejnosti
+            Zavazujeme se, že veškeré užitečné informace vždy zpřístupníme veřejnosti.
           </div>
         </template>
       </div>
@@ -59,12 +59,11 @@
         <Tagline>Férová spolupráce</Tagline>
         <div class="ManifestModule__collab__textContainer">
           <div class="h4">
-            Chcete se s námi podílet
-            na férovém přístupu?
+            Chcete se k nám přidat a podílet se na férovém přístupu?
           </div>
           <FairBadge class="original" />
         </div>
-        <Button>Kontaktujte nás a zapojte se!</Button>
+        <Button href="mailto:info@ferfintech.cz">Napište nám a zapojte se!</Button>
       </div>
 
     </div>

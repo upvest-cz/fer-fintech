@@ -4,11 +4,8 @@
       <Tagline>Jsme skupina fintechových firem</Tagline>
       <h1 ref="title" class="HeroModule__title h2">Fér fintech</h1>
       <div ref="text" class="HeroModule__text">
-        <p>... které si zakládají především na férovém a partnerském přístupu. Naším hlavním cílem je kultivovat trh a obory, ve kterých podnikáme. Co nejvíce zjednodušovat život svých klientů, poskytovat jim skvělé služby a pomáhat jim. </p>
+        <p>... které si zakládají na férovém a partnerském přístupu. Naším hlavním cílem je kultivovat trh a obory, ve kterých podnikáme. Co nejvíce zjednodušovat život našich klientů, poskytovat jim poctivé služby a pomáhat jim vyhnout se špatným nabídkám.</p>
       </div>
-      <Button ref="button" href="#ferovy-manifest" class="Button--plain">
-        přečtěte si Férový manifest
-      </Button>
     </div>
   </section>
 </template>
@@ -30,7 +27,7 @@ export default {
       const tl = gsap.timeline();
       return [
         {
-          targets: [this.$refs.title, this.$refs.text, this.$refs.button.$el],
+          targets: [this.$refs.title, this.$refs.text],
           onInViewport: (el) => {
             tl.from(el, {
               y: 30,
@@ -69,8 +66,6 @@ export default {
 
   .Button {
     @include has-reveal;
-
   }
-
 }
 </style>
