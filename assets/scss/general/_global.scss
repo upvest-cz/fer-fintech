@@ -124,3 +124,40 @@ Global class definitions
 .richtext {
   @include richtext;
 }
+
+/* add this class to where safari need to have repainting forced (clip-path animation, ..) */
+.safari-animation-hack {
+  @media not all and (min-resolution:.001dpcm)
+  { @supports (-webkit-appearance:none) {
+    /* Safari 10.1+  */
+
+    @-webkit-keyframes safariRepaintHack {
+      from {
+        top: 0;
+      }
+
+      to {
+        top: 0.01px;
+      }
+    }
+
+    -webkit-animation: safariRepaintHack 0.1s infinite; /* iOS Safari repaint hack because of iPhone6 (interestingly worked without this on X and 11) */
+  }}
+}
+
+
+// styling for word split animation
+.word {
+  display: inline-block;
+  clip-path: inset(0% 0% 0% 0%);
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    clip-path: none !important;
+    overflow: hidden; /* fall back to overflow. Problem: Overflow cuts descenders. */
+  }
+
+  &__inner {
+    display: inline-block;
+  }
+}

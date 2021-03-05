@@ -63,10 +63,10 @@ export default {
   },
   methods: {
     handleClick(e) {
-      if(this.isScrollTo) {
+      if (this.isScrollTo) {
         e.preventDefault();
         const href = e.currentTarget.getAttribute('href');
-        window.history.replaceState(null, null, href)
+        window.history.replaceState(null, null, href);
 
         gsap.to(window, { duration: 0.6, scrollTo: { y: href }, ease: 'power2.easeOut' });
       }
@@ -87,6 +87,7 @@ export default {
   border-radius: 99px;
   background: $primary;
   color: $black;
+  text-transform: uppercase;
 
   #{$root}__icon {
     @include text-inverted;
@@ -106,6 +107,17 @@ export default {
       z-index: -1;
       background: $black;
       border-radius: 99px;
+    }
+  }
+
+  &.Button--plain {
+    background: transparent;
+    color: $primary;
+
+    #{$root}__icon {
+      &::before {
+        display: none;
+      }
     }
   }
 }
