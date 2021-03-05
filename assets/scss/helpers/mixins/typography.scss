@@ -34,7 +34,7 @@
 
 @mixin heading-2 {
   font-weight: $font-weight-bold;
-  font-size: pxToRem(72px);
+  font-size: pxToRem(64px);
   line-height: 1.25;
   text-transform: uppercase;
 
@@ -45,9 +45,13 @@
 
 @mixin heading-3 {
   font-weight: $font-weight-bold;
-  font-size: pxToRem(72px);
+  font-size: pxToRem(40px);
   line-height: 1.25;
   text-transform: uppercase;
+
+  @include media-breakpoint-up(lg) {
+    font-size: pxToRem(72px);
+  }
 }
 
 @mixin heading-4 {

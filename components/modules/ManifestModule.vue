@@ -133,11 +133,12 @@ export default {
 
     &__number {
       @include has-reveal;
-      @include heading-3;
+      @include heading-2;
       grid-column: 1 / span 1;
       align-self: flex-end;
 
       @include media-breakpoint-up(lg) {
+        @include heading-3;
         text-align: right;
       }
     }
