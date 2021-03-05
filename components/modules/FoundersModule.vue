@@ -8,7 +8,7 @@
       <ul class="FoundersModule__founders">
         <template v-for="i in 1">
           <li ref="foundersItem">
-            <blockquote>
+            <blockquote class="small">
               Zbavme se zavádějících sousloví typu „pohádkové zhodnocení“, „chytrá investice“ nebo „nadstandardní výnos“. Přestaňme tímto toxickým marketingem vzbuzovat falešná očekávání, která pak nemůžeme naplnit. Z transparentnějšího a kulturnějšího prostředí budeme profitovat všichni.
             </blockquote>
             <Author>
@@ -32,7 +32,7 @@
             </Author>
           </li>
           <li ref="foundersItem">
-            <blockquote>
+            <blockquote class="small">
               Fondee je startup, který ukazuje, že investice se dají dělat i jinak – jednoduše, levně, transparentně a bezstarostně. Jeho ambicí je naučit lidi, aby si pravidelně spořili.
             </blockquote>
             <Author>
