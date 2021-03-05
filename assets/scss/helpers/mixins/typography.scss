@@ -23,16 +23,24 @@
 
 @mixin heading-1 {
   font-weight: $font-weight-bold;
-  font-size: pxToRem(120px);
+  font-size: pxToRem(96px);
   line-height: 1.25;
   text-transform: uppercase;
+
+  @include media-breakpoint-up(lg) {
+    font-size: pxToRem(120px);
+  }
 }
 
 @mixin heading-2 {
   font-weight: $font-weight-bold;
-  font-size: pxToRem(96px);
+  font-size: pxToRem(72px);
   line-height: 1.25;
   text-transform: uppercase;
+
+  @include media-breakpoint-up(lg) {
+    font-size: pxToRem(96px);
+  }
 }
 
 @mixin heading-3 {

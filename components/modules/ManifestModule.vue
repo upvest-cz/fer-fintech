@@ -95,29 +95,42 @@ export default {
 
   #{$root}__grid {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: $grid-gutter-width;
     grid-row-gap: 7px;
     margin-bottom: 120px;
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: auto 1fr;
+    }
 
     &__number {
       @include heading-3;
       grid-column: 1 / span 1;
       align-self: flex-end;
-      text-align: right;
+
+      @include media-breakpoint-up(lg) {
+        text-align: right;
+      }
     }
 
     &__text {
       @include text-muted;
 
-      grid-column: 2 / span 1;
       align-self: flex-end;
       margin-bottom: (9em/20);
+      grid-column: 1 / span 1;
+
+      @include media-breakpoint-up(lg) {
+        grid-column: 2 / span 1;
+      }
     }
   }
 
   #{$root}__collab {
-    padding-right: 20%;
+    @include media-breakpoint-up(lg) {
+      padding-right: 20%;
+    }
 
     .Tagline {
       margin-bottom: spacer(3);
@@ -130,6 +143,10 @@ export default {
       svg {
         max-width: 88px;
         margin-left: spacer(4);
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
       }
     }
   }

@@ -51,10 +51,11 @@ export default {
     @include heading-5;
 
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     grid-column-gap: $grid-gutter-width;
 
     @include media-breakpoint-up(lg) {
+      grid-template-columns: auto 1fr;
       margin-right: calc(-1 * #{map-get($container-paddings, 'lg')});
     }
 
@@ -63,9 +64,13 @@ export default {
     }
 
     &__text {
-      grid-column: 2 / span 1;
+      grid-column: 1 / span 1;
       padding-top: 15px;
       margin-bottom: 40px;
+
+      @include media-breakpoint-up(lg) {
+        grid-column: 2 / span 1;
+      }
 
       hr {
         width: 100%;

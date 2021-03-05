@@ -85,7 +85,10 @@ export default {
 
         margin: 0 0 spacer(4);
         font-style: italic;
-        padding-right: 10%;
+
+        @include media-breakpoint-up(lg) {
+          padding-right: 10%;
+        }
 
         &.small {
           @include heading-5;
