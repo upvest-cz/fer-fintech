@@ -1,5 +1,0 @@
-@mixin has-reveal() {
-  html.js &:not(.is-seen) {
-    visibility: hidden;
-  }
-}
