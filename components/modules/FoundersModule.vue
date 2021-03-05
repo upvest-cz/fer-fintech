@@ -77,9 +77,9 @@ export default {
             const tl = gsap.timeline();
 
             const targets = splitIntoWords(dom.blockquote);
-            const duration = 1.5;
+            const duration = 1.3;
             const stagger = 0.05; // 10%;
-            const durationPerEl = Math.max(0.8, duration / (1 + (targets.length - 1) * stagger)); // cap to min 0.8 duration
+            const durationPerEl = Math.max(0.36, duration / (1 + (targets.length - 1) * stagger)); // cap to min 0.36 duration
             const staggerPerEl = durationPerEl * stagger;
 
             targets.forEach((target, i) => {
