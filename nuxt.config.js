@@ -18,24 +18,32 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { name: 'robots', content: 'all' }
     ],
     script: [
       { innerHTML: jsScript, type: 'text/javascript', charset: 'utf-8' },
       { innerHTML: polyfillScript, type: 'text/javascript', charset: 'utf-8' },
     ],
     link: [
-      { rel: 'preload', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,600&display=swap', as: 'style' },
+      {
+        rel: 'preload',
+        href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,600&display=swap',
+        as: 'style'
+      },
       // --- Favicons ---
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
+      { rel: 'canonical', href: 'https://ferfintech.cz/' },
       { name: 'msapplication-TileColor', content: '#000000' },
       { name: 'theme-color', content: '#000000' },
       // --- End Favicons ---
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,600&display=swap' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,600&display=swap'
+      },
     ]
   },
 
@@ -58,8 +66,7 @@ export default {
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -85,4 +92,4 @@ export default {
       },
     },
   }
-}
+};

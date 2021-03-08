@@ -25,7 +25,13 @@ export default {
   head() {
     return {
       title: 'Fér Fintech',
-      description: 'Naším hlavním cílem je kultivovat trh a obory, ve kterých podnikáme. Co nejvíce zjednodušovat život svých klientů, poskytovat jim skvělé služby a pomáhat jim'
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Naším hlavním cílem je kultivovat trh a obory, ve kterých podnikáme. Co nejvíce zjednodušovat život svých klientů, poskytovat jim skvělé služby a pomáhat jim'
+        }
+      ],
     };
   }
 };
