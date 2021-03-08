@@ -5,11 +5,11 @@
       <div class="WhatWeDoModule__list">
         <template v-for="i in 1">
           <div ref="listItem" class="WhatWeDoModule__listItem">
-            <h2 class="WhatWeDoModule__listItem__title">Férový audit pro firmy</h2>
+            <h2 class="WhatWeDoModule__listItem__title">Férový check pro firmy</h2>
             <div class="richtext">
               <p><b>Zakládáte fintechový projekt? Spouštíte nový finanční produkt? Nebo už fungujete nějakou dobu, ale stojíte o to, aby se na férovost vašeho podnikání podívaly nezaujaté oči?</b> Zdarma vás nasměrujeme a propojíme s nezávislými opinion leadery, odborníky či neziskovými organizacemi. Sami jsme mnoha podobnými diskuzemi a konzultacemi prošli a rádi se s vámi podělíme o zkušenosti nebo doporučíme, na koho se ve které oblasti obrátit.</p>
             </div>
-            <Button type="primary" href="mailto:info@ferfintech.cz">Chci férový audit</Button>
+            <Button type="primary" href="mailto:info@ferfintech.cz">Chci férový check</Button>
           </div>
           <div ref="listItem" class="WhatWeDoModule__listItem">
             <h2 class="WhatWeDoModule__listItem__title">Poradenství pro lidi</h2>
