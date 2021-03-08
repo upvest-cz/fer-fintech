@@ -16,7 +16,7 @@
                 <img src="~/assets/images/founders/volny.png" alt="Petr Volný, CEO Upvest">
               </template>
               <template v-slot:name>Petr Volný</template>
-              <template v-slot:position>CEO Upvest</template>
+              <template v-slot:position>Spoluzakladatel a CTO Upvestu</template>
             </Author>
           </li>
           <li ref="foundersItem">
