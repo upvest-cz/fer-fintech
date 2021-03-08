@@ -18,7 +18,9 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'robots', content: 'all' }
+      { name: 'robots', content: 'all' },
+      //<meta name="google-site-verification" content="NENpm1ZtcYKQm-8mftbg5DjfXiRFkd0EZuaHsQsEzW0" />
+      { name: 'google-site-verification', content: 'NENpm1ZtcYKQm-8mftbg5DjfXiRFkd0EZuaHsQsEzW0' }
     ],
     script: [
       { innerHTML: jsScript, type: 'text/javascript', charset: 'utf-8' },
