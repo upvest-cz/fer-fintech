@@ -33,7 +33,7 @@
           </li>
           <li ref="foundersItem">
             <blockquote class="small">
-              Fondee je startup, který ukazuje, že investice se dají dělat i jinak – jednoduše, levně, transparentně a bezstarostně. Jeho ambicí je naučit lidi, aby si pravidelně spořili.
+              Dobře víme, že na investice nemusí dohlížet banky ani finanční poradci, kteří si účtují vysoké marže a poplatky. Chceme Čechy naučit, že své úspory mohou zhodnotit jednoduše, levně, transparentně a bezstarostně. Když se naučíme spořit sebevědomě, budeme jako společnost bohatší v pravém i přeneseném významu slova.
             </blockquote>
             <Author>
               <template v-slot:image>
