@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="FoundersModule__title h3">Zakládající subjekty</h2>
       <div class="FoundersModule__text">
-        <p>Zakládajícími subjekty jsou online životní pojištění Mutumutu, investiční crowdfundingová platforma Upvest a investiční platforma Fondee.</p>
+        <p>Zakládajícími subjekty uskupení Fér Fintech jsou online životní pojištění Mutumutu, investiční crowdfundingová platforma Upvest a investiční platforma Fondee.</p>
       </div>
       <ul class="FoundersModule__founders">
         <template v-for="i in 1">

@@ -59,7 +59,7 @@
         <Tagline>Férová spolupráce</Tagline>
         <div class="ManifestModule__collab__textContainer">
           <div class="h4">
-            Chcete se k nám přidat a podílet se na férovém přístupu?
+            Chcete se přidat k Fér Fintechu a podílet se na férovém přístupu?
           </div>
           <FairBadge class="original" />
         </div>

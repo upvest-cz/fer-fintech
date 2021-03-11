@@ -38,7 +38,7 @@ export default {
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
-      { rel: 'canonical', href: 'https://ferfintech.cz/' },
+      { rel: 'canonical', href: 'https://ferfintech.cz' },
       { name: 'msapplication-TileColor', content: '#000000' },
       { name: 'theme-color', content: '#000000' },
       // --- End Favicons ---

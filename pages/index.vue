@@ -23,13 +23,60 @@ import WhatWeDoModule from '~/components/modules/WhatWeDoModule.vue';
 export default {
   components: { HeroModule, DividerModule, StatsModule, ManifestModule, FoundersModule, WhatWeDoModule },
   head() {
+    const title = 'Fér Fintech';
+    const description = 'Jsme skupina fintechových firem, které si zakládají na férovém a partnerském přístupu. Naším hlavním cílem je kultivovat trh a obory, ve kterých podnikáme.'
     return {
-      title: 'Fér Fintech',
+      title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Naším hlavním cílem je kultivovat trh a obory, ve kterých podnikáme. Co nejvíce zjednodušovat život svých klientů, poskytovat jim skvělé služby a pomáhat jim'
+          content: description,
+        },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image'
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: title
+        },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://ferfintech.cz'
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description
+        },
+        {
+          hid: 'og:image:alt',
+          property: 'og:image:alt',
+          content: title
         }
       ],
     };
