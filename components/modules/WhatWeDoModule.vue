@@ -7,14 +7,14 @@
           <div ref="listItem" class="WhatWeDoModule__listItem">
             <h2 class="WhatWeDoModule__listItem__title">Férový check pro firmy</h2>
             <div class="richtext">
-              <p><b>Zakládáte fintechový projekt? Spouštíte nový finanční produkt? Nebo už fungujete nějakou dobu, ale stojíte o to, aby se na férovost vašeho podnikání podívaly nezaujaté oči?</b> Fér Fintech vás zdarma nasměruje a propojí s nezávislými opinion leadery, odborníky či neziskovými organizacemi. Sami jsme mnoha podobnými diskuzemi a konzultacemi prošli a rádi se s vámi podělíme o zkušenosti nebo doporučíme, na koho se ve které oblasti obrátit.</p>
+              <p><b>Zakládáte fintechový projekt? Spouštíte nový finanční produkt? Nebo už fungujete nějakou dobu, ale stojíte o to, aby se na férovost vašeho podnikání podívaly nezaujaté oči?</b> Fér Fintech vás zdarma nasměruje a propojí s nezávislými opinion leadery, odborníky či neziskovými organizacemi. Sami jsme mnoha podobnými diskuzemi a konzultacemi prošli a rádi se s vámi podělíme o zkušenosti nebo doporučíme, na koho se ve které oblasti obrátit. Napište nám na <a href="mailto:info@ferfintech.cz">info@ferfintech.cz</a>.</p>
             </div>
             <Button type="primary" href="mailto:info@ferfintech.cz">Chci férový check</Button>
           </div>
           <div ref="listItem" class="WhatWeDoModule__listItem">
             <h2 class="WhatWeDoModule__listItem__title">Poradenství pro lidi</h2>
             <div class="richtext">
-              <p><b>Podepsali jste nevýhodnou smlouvu? Zatajil vám finanční poradce potřebné informace nebo špatně vysvětlil produkt? Zjistili jste, že vaše pojištění nebo třeba investice je vlastně k ničemu?</b> Ozvěte se nám. Propojíme Vás s prověřenými nezávislými odborníky a neziskovými organizacemi, které vám s řešením problémů pomůžou.</p>
+              <p><b>Podepsali jste nevýhodnou smlouvu? Zatajil vám finanční poradce potřebné informace nebo špatně vysvětlil produkt? Zjistili jste, že vaše pojištění nebo třeba investice je vlastně k ničemu?</b> Ozvěte se nám. Propojíme Vás s prověřenými nezávislými odborníky a neziskovými organizacemi, které vám s řešením problémů pomůžou. Napište nám na <a href="mailto:info@ferfintech.cz">info@ferfintech.cz</a>.</p>
             </div>
             <Button type="primary" href="mailto:info@ferfintech.cz">Potřebuji poradit</Button>
           </div>
