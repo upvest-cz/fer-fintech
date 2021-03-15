@@ -16,7 +16,7 @@
                 <img src="~/assets/images/founders/volny.png" alt="Petr Volný, CEO Upvest">
               </template>
               <template v-slot:name>Petr Volný</template>
-              <template v-slot:position>Spoluzakladatel a CTO Upvestu</template>
+              <template v-slot:position><a href="https://upvest.cz">Spoluzakladatel a CTO Upvestu</a></template>
             </Author>
           </li>
           <li ref="foundersItem">
@@ -28,7 +28,7 @@
                 <img src="~/assets/images/founders/lenz.png" alt="Jindřich Lenz, CEO Mutumutu">
               </template>
               <template v-slot:name>Jindřich Lenz</template>
-              <template v-slot:position>CEO Mutumutu</template>
+              <template v-slot:position><a href="https://www.mutumutu.cz/">CEO Mutumutu</a></template>
             </Author>
           </li>
           <li ref="foundersItem">
@@ -40,7 +40,7 @@
                 <img src="~/assets/images/founders/hlavsa.png" alt="Jan Hlavsa, Co-Founder Fondee">
               </template>
               <template v-slot:name>Jan Hlavsa</template>
-              <template v-slot:position>CEO Fondee</template>
+              <template v-slot:position><a href="https://www.fondee.cz/">CEO Fondee</a></template>
             </Author>
           </li>
         </template>
