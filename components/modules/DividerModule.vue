@@ -1,9 +1,9 @@
 <template>
-  <section class="module DividerModule">
+  <div class="module DividerModule">
     <div class="container">
       <hr />
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

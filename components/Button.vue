@@ -1,7 +1,7 @@
 <template>
   <component
     :is="getTagName"
-    v-bind="$props"
+    v-bind="getPropsToPass"
     :class="['Button', `Button--${type || 'plain'}`]"
     @click="handleClick"
   >
@@ -33,15 +33,15 @@ export default {
       type: [String, Object],
       default: null,
     },
-    linkFieldObject: {
-      type: Object,
-      default: null,
-    },
     target: {
       type: String,
       default: null,
     },
     rel: {
+      type: String,
+      default: null,
+    },
+    role: {
       type: String,
       default: null,
     },
@@ -56,6 +56,10 @@ export default {
       if (this.href) return 'a';
       if (this.role && this.role === 'button') return 'span';
       return 'button';
+    },
+    getPropsToPass() {
+      const {type, ...props} = this.$props;
+      return props;
     },
     isScrollTo() {
       return this.href && this.href.startsWith('#');

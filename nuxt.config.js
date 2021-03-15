@@ -19,6 +19,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'robots', content: 'all' },
+      { name: 'msapplication-TileColor', content: '#000000' },
+      { name: 'theme-color', content: '#000000' },
       //<meta name="google-site-verification" content="NENpm1ZtcYKQm-8mftbg5DjfXiRFkd0EZuaHsQsEzW0" />
       { name: 'google-site-verification', content: 'NENpm1ZtcYKQm-8mftbg5DjfXiRFkd0EZuaHsQsEzW0' }
     ],
@@ -39,8 +41,6 @@ export default {
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'canonical', href: 'https://ferfintech.cz' },
-      { name: 'msapplication-TileColor', content: '#000000' },
-      { name: 'theme-color', content: '#000000' },
       // --- End Favicons ---
       {
         rel: 'stylesheet',
