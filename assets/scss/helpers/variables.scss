@@ -9,9 +9,20 @@ $container-max-widths: (
   lg: 880px,
 );
 
+$container-large-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 975px,
+);
+
 $container-paddings: (
   xs: $grid-gutter-width,
   lg: 40px,
+);
+
+$container-large-paddings: (
+  xs: $grid-gutter-width,
+  lg: 0,
 );
 
 $spacer: 8px;

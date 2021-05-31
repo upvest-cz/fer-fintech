@@ -105,6 +105,17 @@ Global class definitions
   }
 }
 
+.container-large {
+  @extend .container;
+  @include print-breakpoint-values($container-large-max-widths) using($value) {
+    max-width: $value;
+  }
+  @include print-breakpoint-values($container-large-paddings) using($value) {
+    padding-left: $value;
+    padding-right: $value;
+  }
+}
+
 .sr-only {
   @include sr-only;
 }
