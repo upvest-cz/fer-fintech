@@ -1,7 +1,7 @@
 <template>
   <section class="module StatsModule">
-    <div class="container">
-      <Tagline as="h2">Co nás štve</Tagline>
+    <div class="container-large">
+      <Tagline as="h2">Co byste měli vědět</Tagline>
       <div class="StatsModule__grid">
         <template v-for="i in 1">
           <div ref="statNumber" class="StatsModule__grid__number" style="color: #00E0FF"><span class="h1">55</span> %</div>
@@ -99,13 +99,20 @@ export default {
     grid-column-gap: $grid-gutter-width;
 
     @include media-breakpoint-up(lg) {
-      grid-template-columns: auto 1fr;
-      margin-right: calc(-1 * #{map-get($container-paddings, 'lg')});
+      @include heading-6;
+      grid-column-gap: 70px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
     }
 
     &__number {
       @include has-reveal;
       grid-column: 1 / span 1;
+
+      @include media-breakpoint-up(lg) {
+        grid-column: auto / span 1;
+        grid-row: 1;
+      }
 
       span {
         display: inline-block;
@@ -117,15 +124,24 @@ export default {
       grid-column: 1 / span 1;
       padding-top: 15px;
       margin-bottom: 40px;
+      display: flex;
+      flex-flow: column nowrap;
 
       @include media-breakpoint-up(lg) {
-        grid-column: 2 / span 1;
+        padding-top: 0;
+        grid-column: auto / span 1;
+        grid-row: 2;
       }
 
       hr {
         width: 100%;
         max-width: 180px;
         margin-top: 55px;
+        @include media-breakpoint-up(lg) {
+          margin-top: 0;
+          margin-bottom: 24px;
+          order: -1
+        }
       }
     }
   }
