@@ -22,15 +22,17 @@ export default {
 
   &__image {
     margin-right: spacer(3);
+    flex-shrink: 0;
 
     img {
-      height: 80px;
+      height: 64px;
       width: auto;
     }
   }
 
   &__name {
     font-weight: $font-weight-bold;
+    color: #01FFA4;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="module DividerModule">
-    <div class="container">
+    <div class="container-large">
       <hr />
     </div>
   </div>
@@ -16,7 +16,8 @@ export default {
 .DividerModule {
   height: 2px;
 
-  .container {
+  .container,
+  .container-large {
     position: relative;
   }
 

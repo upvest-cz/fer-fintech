@@ -1,6 +1,6 @@
 <template>
   <section class="module FoundersModule">
-    <div class="container">
+    <div class="container-large">
       <h2 class="FoundersModule__title h3">Zakládající subjekty</h2>
       <div class="FoundersModule__text">
         <p>Zakládajícími subjekty uskupení Fér Fintech jsou online životní pojištění Mutumutu, investiční crowdfundingová platforma Upvest a investiční platforma Fondee.</p>
@@ -137,8 +137,21 @@ export default {
   }
 
   &__founders {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin: 0 -30px;
+    }
+
     li {
       @include has-reveal;
+      flex: 1;
+      min-width: 0;
+
+      @include media-breakpoint-up(lg) {
+        padding: 0 30px;
+      }
 
       &:not(:last-child) {
         margin-bottom: spacer(10);
@@ -150,12 +163,8 @@ export default {
         margin: 0 0 spacer(4);
         font-style: italic;
 
-        @include media-breakpoint-up(lg) {
-          padding-right: 10%;
-        }
-
         &.small {
-          @include heading-5;
+          @include heading-6;
         }
       }
     }
