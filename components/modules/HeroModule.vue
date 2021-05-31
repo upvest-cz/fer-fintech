@@ -45,7 +45,7 @@ export default {
 .HeroModule {
   $root: &;
 
-  padding: 140px 0 160px;
+  padding: 140px 0 120px;
 
   .Tagline {
     margin-bottom: spacer(2);

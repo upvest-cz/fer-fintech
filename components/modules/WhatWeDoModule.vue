@@ -58,7 +58,7 @@ export default {
 .WhatWeDoModule {
   $root: &;
 
-  padding: 160px 0;
+  padding: 120px 0;
 
   .Tagline{
     margin-bottom: spacer(5);

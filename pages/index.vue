@@ -6,7 +6,9 @@
     <DividerModule />
     <StatsModule />
     <DividerModule />
-    <ManifestModule id="ferovy-manifest"/>
+    <ManifestModule id="ferovy-manifest" />
+    <DividerModule />
+    <NewsModule />
     <DividerModule />
     <FoundersModule />
   </div>
@@ -19,12 +21,13 @@ import StatsModule from '~/components/modules/StatsModule.vue';
 import ManifestModule from '~/components/modules/ManifestModule.vue';
 import FoundersModule from '~/components/modules/FoundersModule.vue';
 import WhatWeDoModule from '~/components/modules/WhatWeDoModule.vue';
+import NewsModule from '~/components/modules/NewsModule.vue';
 
 export default {
-  components: { HeroModule, DividerModule, StatsModule, ManifestModule, FoundersModule, WhatWeDoModule },
+  components: { HeroModule, DividerModule, StatsModule, ManifestModule, FoundersModule, WhatWeDoModule, NewsModule },
   head() {
     const title = 'Fér Fintech';
-    const description = 'Jsme skupina fintechových firem, které si zakládají na férovém a partnerském přístupu. Naším hlavním cílem je kultivovat trh a obory, ve kterých podnikáme.'
+    const description = 'Jsme skupina fintechových firem, které si zakládají na férovém a partnerském přístupu. Naším hlavním cílem je kultivovat trh a obory, ve kterých podnikáme.';
     return {
       title,
       meta: [

@@ -84,7 +84,7 @@ export default {
 .StatsModule {
   $root: &;
 
-  padding: 160px 0;
+  padding: 120px 0;
 
   .Tagline,
   #{$root}__title {

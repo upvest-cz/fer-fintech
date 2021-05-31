@@ -72,7 +72,7 @@ export default {
               image: el.querySelector('.Author__image'),
               name: el.querySelector('.Author__name'),
               position: el.querySelector('.Author__position'),
-            }
+            };
 
             const tl = gsap.timeline();
 
@@ -89,29 +89,29 @@ export default {
               wordTl.from(target, {
                 yPercent: 100,
                 duration: durationPerEl,
-                ease: "power4.out",
+                ease: 'power4.out',
                 delay: staggerPerEl * i
               });
 
-              wordTl.to(parent,{
+              wordTl.to(parent, {
                 duration: 0.5,
-                ease: "power4.in",
+                ease: 'power4.in',
                 clipPath: 'inset(-15% -15% -15% -15%)',
-                onStart:() => parent.classList.add('safari-animation-hack'),
+                onStart: () => parent.classList.add('safari-animation-hack'),
                 onComplete: () => parent.classList.remove('safari-animation-hack'),
-              } ,`-=${durationPerEl * 0.6}`); // start at 40% of previous
+              }, `-=${durationPerEl * 0.6}`); // start at 40% of previous
             });
 
             tl.from(dom.image, {
               opacity: 0,
               x: -30,
-            }, 0.3)
+            }, 0.3);
 
             tl.from([dom.name, dom.position], {
               opacity: 0,
               x: 30,
               stagger: 0.2,
-            }, 0.6)
+            }, 0.6);
           }
         }
       ];
@@ -122,11 +122,16 @@ export default {
 
 <style scoped lang="scss">
 .FoundersModule {
-  padding: 160px 0;
+  padding: 120px 0;
 
 
   &__title {
     margin-bottom: spacer(3);
+
+    @include media-breakpoint-up(lg) {
+      // force a break into two lines
+      padding-right: 10%;
+    }
   }
 
   &__text {

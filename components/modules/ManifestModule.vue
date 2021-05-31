@@ -114,7 +114,7 @@ export default {
 .ManifestModule {
   $root: &;
 
-  padding: 160px 0;
+  padding: 120px 0;
 
   #{$root}__title {
     margin-bottom: spacer(3);

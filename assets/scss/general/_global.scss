@@ -138,22 +138,23 @@ Global class definitions
 
 /* add this class to where safari need to have repainting forced (clip-path animation, ..) */
 .safari-animation-hack {
-  @media not all and (min-resolution:.001dpcm)
-  { @supports (-webkit-appearance:none) {
-    /* Safari 10.1+  */
+  @media not all and (min-resolution: .001dpcm) {
+    @supports (-webkit-appearance:none) {
+      /* Safari 10.1+  */
 
-    @-webkit-keyframes safariRepaintHack {
-      from {
-        top: 0;
+      @-webkit-keyframes safariRepaintHack {
+        from {
+          top: 0;
+        }
+
+        to {
+          top: 0.01px;
+        }
       }
 
-      to {
-        top: 0.01px;
-      }
+      -webkit-animation: safariRepaintHack 0.1s infinite; /* iOS Safari repaint hack because of iPhone6 (interestingly worked without this on X and 11) */
     }
-
-    -webkit-animation: safariRepaintHack 0.1s infinite; /* iOS Safari repaint hack because of iPhone6 (interestingly worked without this on X and 11) */
-  }}
+  }
 }
 
 
@@ -170,5 +171,80 @@ Global class definitions
 
   &__inner {
     display: inline-block;
+  }
+}
+
+
+// swiper overrides
+
+.swiper-pagination {
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &.swiper-pagination-lock {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: #223F48;
+  opacity: 1;
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #01FFA4;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 60px;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary;
+
+  .swiper-container-initialized ~ & {
+    transition: opacity 0.26s ease;
+  }
+
+  &::after {
+    color: $black;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0;
+  }
+
+  &.swiper-button-lock {
+    display: none;
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+  transform: translateX(-50%) translateY(-50%);
+
+  &::after {
+    padding-right: 2px;
+  }
+}
+
+.swiper-button-next {
+  right: 0;
+  transform: translateX(50%) translateY(-50%);
+
+  &::after {
+    padding-left: 2px;
   }
 }
