@@ -56,14 +56,22 @@
 
 @mixin heading-4 {
   font-weight: $font-weight-semibold;
-  font-size: pxToRem(40px);
+  font-size: pxToRem(30px);
   line-height: 1.25;
+
+  @include media-breakpoint-up(lg) {
+    font-size: pxToRem(40px);
+  }
 }
 
 @mixin heading-5 {
   font-weight: $font-weight-bold;
-  font-size: pxToRem(32px);
+  font-size: pxToRem(24px);
   line-height: 1.25;
+
+  @include media-breakpoint-up(lg) {
+    font-size: pxToRem(32px);
+  }
 }
 
 @mixin heading-6 {
