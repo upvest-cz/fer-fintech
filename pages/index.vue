@@ -10,6 +10,8 @@
     <DividerModule />
     <NewsModule />
     <DividerModule />
+    <SupportersModule/>
+    <DividerModule />
     <FoundersModule />
   </div>
 </template>
@@ -22,9 +24,10 @@ import ManifestModule from '~/components/modules/ManifestModule.vue';
 import FoundersModule from '~/components/modules/FoundersModule.vue';
 import WhatWeDoModule from '~/components/modules/WhatWeDoModule.vue';
 import NewsModule from '~/components/modules/NewsModule.vue';
+import SupportersModule from '~/components/modules/SupportersModule.vue';
 
 export default {
-  components: { HeroModule, DividerModule, StatsModule, ManifestModule, FoundersModule, WhatWeDoModule, NewsModule },
+  components: { HeroModule, DividerModule, StatsModule, ManifestModule, FoundersModule, WhatWeDoModule, NewsModule, SupportersModule },
   head() {
     const title = 'Fér Fintech';
     const description = 'Jsme skupina fintechových firem, které si zakládají na férovém a partnerském přístupu. Naším hlavním cílem je kultivovat trh a obory, ve kterých podnikáme.';

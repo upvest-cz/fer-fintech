@@ -29,13 +29,14 @@
 <script>
 import Swiper from 'swiper';
 import SwiperCore, { Navigation, Pagination } from 'swiper/core';
-import Author from '~/components/Author.vue';
 import { ModuleMixin } from '~/mixins/moduleMixin.js';
 import forbesImage from '~/assets/images/news/forbes.jpg'
 import cowboysImage from '~/assets/images/news/fintechcowboys.jpg'
 import penizeImage from '~/assets/images/news/penize.jpeg'
 import feeditImage from '~/assets/images/news/feedit.jpeg'
 import seznamImage from '~/assets/images/news/seznamzpravy.jpg'
+import Tagline from '@/components/Tagline.vue';
+import AspectRatio from '@/components/AspectRatio.vue';
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -43,7 +44,8 @@ export default {
   name: 'FoundersModule',
   mixins: [ModuleMixin],
   components: {
-    Author
+    AspectRatio,
+    Tagline
   },
   data() {
     return {
