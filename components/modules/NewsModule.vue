@@ -8,7 +8,9 @@
             <div class="swiper-slide" v-for="article in articles">
               <a :href="article.href" target="_blank" rel="nofollow" class="NewsModule__item">
                 <article>
-                  <img class="NewsModule__item__image" :src="article.image" alt="Forbes.cz">
+                  <AspectRatio :aspect-ratio="277/159">
+                    <img class="NewsModule__item__image" :src="article.image" alt="Forbes.cz">
+                  </AspectRatio>
                   <h3 class="NewsModule__item__title">{{article.title}}</h3>
                   <address class="NewsModule__item__author" rel="author">{{article.author}}</address>
                 </article>
@@ -30,6 +32,10 @@ import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 import Author from '~/components/Author.vue';
 import { ModuleMixin } from '~/mixins/moduleMixin.js';
 import forbesImage from '~/assets/images/news/forbes.jpg'
+import cowboysImage from '~/assets/images/news/fintechcowboys.jpg'
+import penizeImage from '~/assets/images/news/penize.jpeg'
+import feeditImage from '~/assets/images/news/feedit.jpeg'
+import seznamImage from '~/assets/images/news/seznamzpravy.jpg'
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -50,13 +56,25 @@ export default {
         },
         {
           href: "https://www.seznamzpravy.cz/clanek/cesi-s-penezi-neumi-polovina-nema-rezervy-nebo-se-zadluzila-rika-pruzkum-151807",
-          image: forbesImage,
+          image: seznamImage,
           title: 'Češi s penězi neumí. Polovina nemá rezervy nebo se zadlužila, říká průzkum',
           author: 'SeznamZprávy.cz'
         },
         {
+          href: "https://fintechcowboys.cz/fer-fintech/",
+          image: cowboysImage,
+          title: 'Fér Fintech aneb pomáhat a chránit ve fintechu',
+          author: 'FinTech Cowboys'
+        },
+        {
+          href: "https://www.penize.cz/investice/426083-dvakrat-mer-jednou-investuj",
+          image: penizeImage,
+          title: 'Dvakrát měř, jednou investuj',
+          author: 'Peníze.cz'
+        },
+        {
           href: "https://feedit.cz/2021/03/10/mutumutu-upvest-a-fondee-jdou-prikladem-trhu-s-financnimi-sluzbami-a-zakladaji-fer-fintech/",
-          image: forbesImage,
+          image: feeditImage,
           title: 'Mutumutu, Upvest a Fondee jdou příkladem trhu s finančními službami a zakládají Fér Fintech',
           author: 'FeedIT.cz'
         },
@@ -118,14 +136,15 @@ export default {
     &__image {
       border-radius: 16px;
       overflow: hidden;
-      margin-bottom: 16px;
       display: block;
       vertical-align: top;
+      object-fit: cover;
     }
 
     &__title {
       @include heading-6;
       text-transform: initial;
+      margin-top: spacer(2);
     }
 
     &__author {
