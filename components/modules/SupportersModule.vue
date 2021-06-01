@@ -4,23 +4,23 @@
       <Tagline as="h2">Kdo nás podporuje?</Tagline>
       <div class="SupportersModule__items">
         <template v-for="i in 1">
-          <div class="SupportersModule__item" ref="items">
+          <a href="https://fintree.cz/" target="_blank" class="SupportersModule__item" ref="items">
             <div class="SupportersModule__image">
               <img src="~/assets/images/logos/fintree.png" alt="Fintree">
             </div>
-          </div>
-          <div class="SupportersModule__item" ref="items">
+          </a>
+          <a href="https://rozbiteprasatko.cz/" target="_blank" class="SupportersModule__item" ref="items">
             <div class="SupportersModule__image">
               <img src="~/assets/images/logos/Rozbité prasátko.png" alt="Rozbité prasátko">
             </div>
-          </div>
-          <div class="SupportersModule__item" ref="items">
+          </a>
+          <a href="https://twitter.com/littlelucy_lu" target="_blank" class="SupportersModule__item" ref="items">
             <div class="SupportersModule__image">
               <img src="~/assets/images/logos/lucia.png" alt="Lucia Tothova">
             </div>
             <div class="SupportersModule__name">Lucia Tothova</div>
             <div class="SupportersModule__tag">@littlelucy_lu</div>
-          </div>
+          </a>
           <div class="SupportersModule__item" ref="items">
             <div class="SupportersModule__image">
               <img src="~/assets/images/logos/sedlacek.png" alt="Lukáš Sedláček">
@@ -87,6 +87,7 @@ export default {
     min-width: 0;
     text-align: center;
     padding: 30px;
+    display: block;
 
     @include media-breakpoint-up(sm) {
       flex-basis: 50%;
