@@ -6,7 +6,7 @@
         <div class="swiper-container" ref="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="article in articles">
-              <a :href="article.href" target="_blank" rel="nofollow" class="NewsModule__item">
+              <a :href="article.href" target="_blank" rel="nofollow" class="NewsModule__item" ref="items">
                 <article>
                   <AspectRatio :aspect-ratio="277/159">
                     <img class="NewsModule__item__image" :src="article.image" alt="Forbes.cz">
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import gsap from 'gsap';
 import Swiper from 'swiper';
 import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 import { ModuleMixin } from '~/mixins/moduleMixin.js';
@@ -112,7 +113,18 @@ export default {
   },
   methods: {
     getReveals() {
-      return [];
+      return [
+        {
+          targets: this.$refs.swiper,
+          onInViewport: () => {
+            gsap.from(this.$refs.items, {
+              y: 30,
+              opacity: 0,
+              stagger: 0.15
+            })
+          }
+        }
+      ];
     }
   }
 };
@@ -152,6 +164,10 @@ export default {
     &__author {
       font-style: normal;
     }
+  }
+
+  .swiper-container {
+    @include has-reveal;
   }
 
   .swiper-button-prev,

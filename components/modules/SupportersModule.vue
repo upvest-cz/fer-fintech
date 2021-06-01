@@ -3,35 +3,38 @@
     <div class="container-large">
       <Tagline as="h2">Kdo nás podporuje?</Tagline>
       <div class="SupportersModule__items">
-        <div class="SupportersModule__item">
-          <div class="SupportersModule__image">
-            <img src="~/assets/images/logos/fintree.png" alt="Fintree">
+        <template v-for="i in 1">
+          <div class="SupportersModule__item" ref="items">
+            <div class="SupportersModule__image">
+              <img src="~/assets/images/logos/fintree.png" alt="Fintree">
+            </div>
           </div>
-        </div>
-        <div class="SupportersModule__item">
-          <div class="SupportersModule__image">
-            <img src="~/assets/images/logos/Rozbité prasátko.png" alt="Rozbité prasátko">
+          <div class="SupportersModule__item" ref="items">
+            <div class="SupportersModule__image">
+              <img src="~/assets/images/logos/Rozbité prasátko.png" alt="Rozbité prasátko">
+            </div>
           </div>
-        </div>
-        <div class="SupportersModule__item">
-          <div class="SupportersModule__image">
-            <img src="~/assets/images/logos/lucia.png" alt="Lucia Tothova">
+          <div class="SupportersModule__item" ref="items">
+            <div class="SupportersModule__image">
+              <img src="~/assets/images/logos/lucia.png" alt="Lucia Tothova">
+            </div>
+            <div class="SupportersModule__name">Lucia Tothova</div>
+            <div class="SupportersModule__tag">@littlelucy_lu</div>
           </div>
-          <div class="SupportersModule__name">Lucia Tothova</div>
-          <div class="SupportersModule__tag">@littlelucy_lu</div>
-        </div>
-        <div class="SupportersModule__item">
-          <div class="SupportersModule__image">
-            <img src="~/assets/images/logos/sedlacek.png" alt="Lukáš Sedláček">
+          <div class="SupportersModule__item" ref="items">
+            <div class="SupportersModule__image">
+              <img src="~/assets/images/logos/sedlacek.png" alt="Lukáš Sedláček">
+            </div>
+            <div class="SupportersModule__name">Lukáš Sedláček</div>
           </div>
-          <div class="SupportersModule__name">Lukáš Sedláček</div>
-        </div>
+        </template>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import gsap from 'gsap';
 import { ModuleMixin } from '~/mixins/moduleMixin.js';
 import Tagline from '@/components/Tagline.vue';
 import AspectRatio from '@/components/AspectRatio.vue';
@@ -45,7 +48,17 @@ export default {
   },
   methods: {
     getReveals() {
-      return [];
+      return [
+        {
+          targets: this.$refs.items,
+          onInViewport: (el) => {
+            gsap.from(el, {
+              opacity: 0,
+              y: 30
+            });
+          }
+        }
+      ];
     }
   }
 };
@@ -59,7 +72,7 @@ export default {
     margin-bottom: spacer(5);
   }
 
-  &__items{
+  &__items {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -68,6 +81,7 @@ export default {
   }
 
   &__item {
+    @include has-reveal;
     flex: 1;
     flex-basis: 100%;
     min-width: 0;
