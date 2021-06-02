@@ -21,12 +21,12 @@
             <div class="SupportersModule__name">Lucia Tothova</div>
             <div class="SupportersModule__tag">@littlelucy_lu</div>
           </a>
-          <div class="SupportersModule__item" ref="items">
+          <a href="https://elai.cz" target="_blank" class="SupportersModule__item" ref="items">
             <div class="SupportersModule__image">
               <img src="~/assets/images/logos/sedlacek.png" alt="Lukáš Sedláček">
             </div>
             <div class="SupportersModule__name">Lukáš Sedláček</div>
-          </div>
+          </a>
         </template>
       </div>
     </div>
